@@ -1,10 +1,30 @@
+{% load staticfiles %}
+{% load util %}
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <style type="text/css">
+    html {
+      background-color: {% random_color %};
+    }
+  </style>
 </head>
 <body>
-  Hello world
+  <div class="container">
+    <h1>Happiness Club</h1>
+    <p class="lead">Happiness Club is a student group at Northwestern University committed to increasing the happiness of members of the Northwestern community. How do we do this? Through fun and exciting activities!</p>
+    <div class="event">
+    <strong>Next event:</strong><br>
+    Free Hugs Day<br>
+    2 - 4 pm, The Arch<br>
+    Monday, September 23
+    </div>
+    <div class="center top20 bottom20">
+      <a href="" class="button">Another random group!</a>
+    </div>
+  </div>
 </body>
 </html>
