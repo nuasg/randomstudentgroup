@@ -14,14 +14,21 @@
 </head>
 <body>
   <div class="container">
-    <h1>Happiness Club</h1>
-    <p class="lead">Happiness Club is a student group at Northwestern University committed to increasing the happiness of members of the Northwestern community. How do we do this? Through fun and exciting activities!</p>
+    <h1>{{ group.name }}</h1>
+    <p class="lead">{{ group.description }}</p>
+    {% if group.p_contact_name %}
+    <div class="event">
+    To get involved, contact <strong>{{ group.p_contact_name }}</strong> at {{ group.p_contact_email }}.
+    </div>
+    {% endif %}
+    <!--
     <div class="event">
     <strong>Next event:</strong><br>
     Free Hugs Day<br>
     2 - 4 pm, The Arch<br>
     Monday, September 23
     </div>
+    -->
     <div class="center top20 bottom20">
       <a href="" class="button">Another random group!</a>
     </div>
