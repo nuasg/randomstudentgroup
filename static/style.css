@@ -25,7 +25,6 @@ html {
     border: 1px solid #999;
     border-radius: 3px;
     padding: 20px 40px;
-    background-color: #66dd66;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -33,6 +32,10 @@ html {
 }
 .button:hover {
     background-color: #88dd88;
+}
+.button,
+.button:active {
+    background-color: #66dd66;
 }
 
 .center {
