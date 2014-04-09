@@ -12,9 +12,11 @@ class Group(models.Model):
     objects = GroupManager()
     name = models.CharField(max_length=100)
     description = models.TextField()
+    webpage = models.URLField(null=True, blank=True)
     fb_url = models.URLField(null=True, blank=True)
 
     # Some student groups we scrape aren't too active
+    # or we don't want to display them because they're dorms
     is_active = models.BooleanField(default=True)
 
     p_contact_name = models.CharField(max_length=100, null=True, blank=True)
@@ -22,13 +24,4 @@ class Group(models.Model):
 
     def __unicode__(self):
         return self.name
-
-class Event(models.Model):
-    name = models.CharField(max_length=100)
-    time = models.DateTimeField()
-    location = models.CharField(max_length=100)
-    group = models.ForeignKey(Group)
-
-    def __unicode__(self):
-        return 'Event %s held by %s' % (self.name, self.group.name)
 

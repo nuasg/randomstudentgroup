@@ -10,3 +10,4 @@ def home(request):
     return render_to_response('group.html',
                               locals(),
                               context_instance=RequestContext(request))
+

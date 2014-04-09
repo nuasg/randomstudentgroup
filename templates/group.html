@@ -5,12 +5,13 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ group.name }} | Random Student Group</title>
-  <link rel="stylesheet" href="{% static 'style.css' %}" />
-  <style type="text/css">
-    html {
-      background-color: {% random_color %};
-    }
+  <style>
+  @font-face {
+      font-family: 'Museo Slab';
+      src: url('{% static 'fonts/museo_slab.woff' %}') format('woff');
+  }
   </style>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,15 +32,7 @@
     To get involved, contact <strong>{{ group.p_contact_name }}</strong> at {{ group.p_contact_email }}.
     </div>
     {% endif %}
-    <!--
-    <div class="event">
-    <strong>Next event:</strong><br>
-    Free Hugs Day<br>
-    2 - 4 pm, The Arch<br>
-    Monday, September 23
-    </div>
-    -->
-    <div class="center top20 bottom20">
+    <div class="center top20 bottom10">
       <a href="" class="button">Another random group!</a>
     </div>
   </div>

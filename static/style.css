@@ -1,15 +1,28 @@
 html {
     font-family: 'Source Sans Pro', sans-serif;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #8B4B96;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .container {
     width: 600px;
-    min-height: 400px;
-    border: 1px solid #333;
-    margin: 300px auto 0;
-    background-color: #f7f7f7;
-    border-radius: 12px;
-    padding: 0 40px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 40px 40px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 38px;
+    font-family: 'Museo Slab', Georgia, serif;
 }
 
 .lead {
@@ -22,20 +35,35 @@ html {
 
 .button {
     display: inline-block;
-    border: 1px solid #999;
-    border-radius: 3px;
-    padding: 20px 40px;
-    color: white;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 14px 26px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
+    color: white;
 }
 .button:hover {
-    background-color: #88dd88;
+    background-color: #777;
 }
 .button,
 .button:active {
-    background-color: #66dd66;
+    background-color: #636363;
 }
 
 .center {
@@ -45,6 +73,6 @@ html {
 .top20 {
     margin-top: 20px;
 }
-.bottom20 {
-    margin-bottom: 20px;
+.bottom10 {
+    margin-bottom: 10px;
 }
