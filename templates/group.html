@@ -26,7 +26,7 @@
 <body>
   <div class="container">
     <h1>{{ group.name }}</h1>
-    <p class="lead">{{ group.description }}</p>
+    <div class="lead">{{ group.description|safe }}</div>
     {% if group.p_contact_name %}
     <div class="event">
     To get involved, contact <strong>{{ group.p_contact_name }}</strong> at {{ group.p_contact_email }}.
